@@ -24,12 +24,26 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean integration-test -Dport=443 -Dudid=Google_Pixel_3_real -DplatformName=android
-    - name: Allure report V2
-    # You may pin to the exact commit or the version.
-    # uses: QuintilianoNery/action-allure-report-V2@0695401fc18f6a083fab548315fc10f1cc4f56e6
-      uses: QuintilianoNery/action-allure-report-V2@0.2.0
+    - name: Get Allure history
+      uses: actions/checkout@v2
+      if: always()
+      continue-on-error: true
       with:
-        # Allure test result data dir
-        results-dir: everis-app-mobile-appium-java-master/target/allure-results
-        # Allure report target dir
-        report-dir: allure-report
+        ref: gh-pages
+        path: gh-pages
+    - name: Test marketplace action
+      uses: simple-elf/allure-report-action@master
+      if: always()
+      id: allure-report
+      with:
+        allure_results: target/allure-results
+        gh_pages: gh-pages
+        allure_report: allure-report
+        allure_history: allure-history
+    - name: Deploy report to Github Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        PERSONAL_TOKEN: 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
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: allure-history

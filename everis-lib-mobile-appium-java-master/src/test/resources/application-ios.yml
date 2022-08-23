@@ -1,0 +1,16 @@
+capabilities:
+  appiumHub: https://jcaparob:7d592e8d-29b9-4671-a8d1-81e587b5514d@ondemand.us-west-1.saucelabs.com/wd/hub
+  #appiumHub: http://127.0.0.1:4723/wd/hub
+  platformName: iOS
+  #  platformVersion: 15.4
+  config: '{"app": "https://sctestautomiosdev.blob.core.windows.net/apps/Mi_Movistar_app.zip",
+  "platformName": "iOS",
+  "platformVersion": "15.2",
+  "deviceName": "iPhone 11 Simulator",
+  "appiumVersion": "1.22.3"}'
+
+###################
+### DATA DRIVEN ###
+###################
+ddt:
+  file: DDT/IOS.XSLX

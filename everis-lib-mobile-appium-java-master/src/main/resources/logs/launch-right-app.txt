@@ -1,0 +1,5 @@
+Se cargo el aplicativo el aplicativo correctamente.
+Session Id >>> {0},
+Configuration >>> {1},
+Context >>> {2},
+Status >>> {3}

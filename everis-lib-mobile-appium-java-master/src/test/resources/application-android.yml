@@ -1,0 +1,18 @@
+capabilities:
+  appiumHub: http://192.168.0.4:4448
+  #appiumHub: http://127.0.0.1:4723/wd/hub
+  automationName: UiAutomator2
+  platformName: Android
+  platformVersion: 11
+  deviceName: Mi A3
+  app:
+  udid: de780a771e67
+  android:
+    appActivity: com.google.android.apps.youtube.app.WatchWhileActivity
+    appPackage: com.google.android.youtube
+
+###################
+### DATA DRIVEN ###
+###################
+ddt:
+  file: DDT/ADNDROID.XSLX

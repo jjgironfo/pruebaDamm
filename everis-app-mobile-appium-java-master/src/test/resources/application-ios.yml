@@ -1,0 +1,10 @@
+capabilities:
+  appiumHub: http://192.168.0.4:4443
+  #appiumHub: http://127.0.0.1:4723/wd/hub
+  platformName: iOS
+  #  platformVersion: 15.4
+  config: '{"automationName":"XCUITest",
+            "app":"",
+            "appium:udid":"00008101-000E69583E44001E",
+            "deviceName":"iPhone de Percy",
+            "bundleId":"com.google.ios.youtube"}'

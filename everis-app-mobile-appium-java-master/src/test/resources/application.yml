@@ -1,0 +1,27 @@
+###############################################################################
+###############################################################################
+############################ MOBILE COFIGURATION ##############################
+############# Discoverd more properties on MobileDriverProperties.md ##########
+##################### spring.profiles.active: set Profiles ####################
+###############################################################################
+###############################################################################
+mobiledriver:
+  implicitWaitOnSeconds: 30
+  appiumGrid: on
+  screenRecorder: on
+
+###################
+### DATA DRIVEN ###
+###################
+ddt:
+  file: /Users/pmendozz/Documents/Pichincha/app/data/DDT_app_pichincha.xlsx
+
+###########################################################################
+### To use JDBC configuration, comment 'autoconfigure.exclude' property ###
+###########################################################################
+spring:
+  dataSource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:54322/xxxx
+    username: xxxx
+    password: xxxx

@@ -30,6 +30,6 @@ jobs:
       uses: QuintilianoNery/action-allure-report-V2@0.2.0
       with:
         # Allure test result data dir
-        results-dir: everis-app-mobile-appium-java-master\target\allure-results
+        results-dir: everis-app-mobile-appium-java-master/target/allure-results
         # Allure report target dir
         report-dir: allure-report

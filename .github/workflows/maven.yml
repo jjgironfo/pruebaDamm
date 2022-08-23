@@ -47,3 +47,12 @@ jobs:
         PERSONAL_TOKEN: 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
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
+    - name: Post the link to the report
+      if: always()
+      uses: Sibz/github-status-action@v1
+      with: 
+          authToken: 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
+          context: 'Test report'
+          state: 'success'
+          sha: ${{ github.event.pull_request.head.sha }}
+          target_url: simple-elf.github.io/github-allure-history/${{ github.run_number }}
